@@ -1,0 +1,14 @@
+<h1>Feature Product</h1>
+<% @product.each do |t|%>
+	<% if t.feature==true%>
+		<div>
+    	<div>
+      	<%= image_tag "#{t.image}"%>
+      </div>
+      <p>Brand Name:<%=t.name%></p>
+    	<p>Model no:<%=t.model_no%></p>
+      <input type="button" value="buy now" class="buy"/>
+     </div>
+	<%end%>
+<%end%>
+
