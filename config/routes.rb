@@ -1,9 +1,18 @@
 NCW::Application.routes.draw do
+  get "customers/create"
+
+  get "sign_up/index"
+
+  get "sign_up/create"
+
+  get "sign_up/new"
+
   get "main/index"
 
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
   devise_for :users
+  resources :customers
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
